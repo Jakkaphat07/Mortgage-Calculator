@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="main">
+    <div class="calculator">
+      <div class="title">
+        <h2>Mortgage Calculator</h2> 
+        <label for="clear all" id="clearAll">Clear All</label>
+       </div>
+        <form id="mortgageForm" class="mortgageForm">
+          <div class="formgroup1">
+            <label for="MortgageAmount">Mortgage Amount</label>
+            <div class="inputgroup1">
+              <span>£</span>
+              <input type="text" name="MortgageAmount" id="MortgageAmount">
+            </div>
+          </div>
+          <div class="formgroup2">
+            <div>
+              <label for="MortgageTerm">Mortgage Term</label>
+              <div class="inputgroup2">
+                <input type="text" name="MortgageTerm" id="MortgageTerm">
+                <span>years</span>
+              </div>
+            </div>
+            <div>
+              <label for="Interestrate">Interest Rate</label>
+              <div class="inputgroup2">
+                <input type="text" name="InterestRate" id="InterestRate">
+                <span>%</span>
+              </div>
+            </div>
+          </div>
+          <div class="formgroup3">
+            <label for="MortageType">Mortgage Type</label>
+            <div class="inputgroup3">
+              <input type="radio" name="MortageType" id="Repayment" value="Repayment">
+              <label for="Repayment">
+                Repayment
+              </label>
+            </div>
+            <div class="inputgroup3">
+              <input type="radio" name="MortageType" id="InterestOnly" value="InterestOnly">
+              <label for="InterestOnly">
+                Interest Only
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="button_style"><img src="assets/images/icon-calculator.svg" alt="calculator_icon">Calculate Repayments</button>  
+        </form>
+    </div>
+    <div class="result_container">
+      <div class="empty_result" id="empty_result">
+        <img src="assets/images/illustration-empty.svg" alt="empty">
+        <h2>Results shown here</h2>
+        <p>Complete the form and click “calculate repayments” </p>
+        <p>to see what your monthly repayments would be.</p>
+      </div>
+      <div class="result" id="result"   style="display: none;">
+        <h2> Your results</h2>
+        <p>Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
+        <div class="calculator_result">
+          <div class="monthly_repayments">
+            <p>Your monthly repayments</p>
+            <span id="monthlyRepayments"></span>
+          </div>
+          <div class="total_term">
+            <p>Total you'll repay over the term</p>
+            <span id="totalRepayments"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Jakkaphat Khamnarak</a>.
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
